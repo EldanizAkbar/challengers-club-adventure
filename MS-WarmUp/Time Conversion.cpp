@@ -6,18 +6,21 @@ using namespace std;
  * Complete the timeConversion function below.
  */
 string timeConversion(string s) {
+    int hour = (s[0] - '0') * 10 + (s[1] - '0');
  if(s[8]=='A' && s[9]=='M'){
      if(s[0]=='1' && s[1]=='2'){
          s[0]='0';
          s[1]='0';
      } 
  }
+  
  else{
-     if(s[0]=='1' || s[1]!='2'){
+     if(hour<12){
          s[0]+=1;
          s[1]+=2;
      } 
- } 
+     }
+ 
  s.erase(s.end() - 2, s.end());
  return s;
 }
