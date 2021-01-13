@@ -1,40 +1,84 @@
-#include <bits/stdc++.h>
++#include <bits/stdc++.h>
 
 using namespace std;
 
+string ltrim(const string &);
+string rtrim(const string &);
+
 /*
- * Complete the timeConversion function below.
+ * Complete the 'gradingStudents' function below.
+ *
+ * The function is expected to return an INTEGER_ARRAY.
+ * The function accepts INTEGER_ARRAY grades as parameter.
  */
-string timeConversion(string s) {
- if(s[8]=='A' && s[9]=='M'){
-     if(s[0]=='1' && s[1]=='2'){
-         s[0]='0';
-         s[1]='0';
-     } 
- }
- else{
-     if(s[0]=='1' || s[1]!='2'){
-         s[0]+=1;
-         s[1]+=2;
-     } 
- } 
- s.erase(s.end() - 2, s.end());
- return s;
-}
+
+vector<int> gradingStudents(vector<int> grades) {
+
+     for(int i=0;i<grades.size(); i++)
+    {
+        int m = ((grades[i] + 4)/5)*5;
+        if (grades[i] >= 38 && m - grades[i] < 3)
+            grades[i] = m;
+    }
+    return grades;
+    }
 
 int main()
 {
     ofstream fout(getenv("OUTPUT_PATH"));
 
-    string s;
-    getline(cin, s);
+    string grades_count_temp;
+    getline(cin, grades_count_temp);
 
-    string result = timeConversion(s);
+    int grades_count = stoi(ltrim(rtrim(grades_count_temp)));
 
-    fout << result << "\n";
+    vector<int> grades(grades_count);
+
+    for (int i = 0; i < grades_count; i++) {
+        string grades_item_temp;
+        getline(cin, grades_item_temp);
+
+        int grades_item = stoi(ltrim(rtrim(grades_item_temp)));
+
+        grades[i] = grades_item;
+    }
+
+    vector<int> result = gradingStudents(grades);
+
+    for (int i = 0; i < result.size(); i++) {
+        fout << result[i];
+
+        if (i != result.size() - 1) {
+            fout << "\n";
+        }
+    }
+
+    fout << "\n";
 
     fout.close();
 
     return 0;
+}
+
+string ltrim(const string &str) {
+    string s(str);
+
+    s.erase(
+        s.begin(),
+        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
+    );
+
+    return s;
+}
+
+string rtrim(const string &str) {
+    string s(str);
+
+    s.erase(
+        find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(),
+        s.end()
+    );
+
+    return s;
 }
 
