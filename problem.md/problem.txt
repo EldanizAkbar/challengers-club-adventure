@@ -1,6 +1,6 @@
 Problems that I couldn't solve.
 
-Forming a Magic Square - https://www.hackerrank.com/challenges/magic-square-forming
+[Forming a Magic Square](https://www.hackerrank.com/challenges/magic-square-forming)
 
 Circular Array Rotation - https://www.hackerrank.com/challenges/circular-array-rotation
 
