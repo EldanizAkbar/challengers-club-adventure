@@ -1,0 +1,23 @@
+Forming a Magic Square - https://www.hackerrank.com/challenges/magic-square-forming
+
+Circular Array Rotation - https://www.hackerrank.com/challenges/circular-array-rotation
+
+Cut the sticks - https://www.hackerrank.com/challenges/cut-the-sticks
+
+Non-Divisible Subset - https://www.hackerrank.com/challenges/non-divisible-subset
+
+Queen's Attack || - https://www.hackerrank.com/challenges/queens-attack-2
+
+ACM ICPC Team - https://www.hackerrank.com/challenges/acm-icpc-team
+
+Organizing Containers of Balls - https://www.hackerrank.com/challenges/organizing-containers-of-balls
+
+Bigger is Greater - https://www.hackerrank.com/challenges/bigger-is-greater
+
+Modified Kaprekar Numbers - https://www.hackerrank.com/challenges/kaprekar-numbers
+
+Beautiful Triplets - https://www.hackerrank.com/challenges/beautiful-triplets
+
+
+
+
